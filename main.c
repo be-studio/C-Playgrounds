@@ -13,8 +13,9 @@ int main(void) {
   scanf("%s", filename);
 
   char a[] = "gcc -o ";
-  char b[] = " ";
+  char b[] = ".out ";
   char c[] = ".c && ./";
+  char d[] = ".out";
 
   strcat(command, a);
   strcat(command, filename);
@@ -22,6 +23,7 @@ int main(void) {
   strcat(command, filename);
   strcat(command, c);
   strcat(command, filename);
+  strcat(command, d);
 
   system("clear");
   system(command);
