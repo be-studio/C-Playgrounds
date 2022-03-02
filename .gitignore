@@ -1,0 +1,6 @@
+*
+!*.*
+!*/
+*.o
+/.cache
+/.ccls-cache
