@@ -13,6 +13,7 @@ int is_listed_directory(const char *);
 int get_file_choice(int);
 int is_directory(const char *);
 char *generate_command(const char *);
+void alloc(void);
 void clear_screen(void);
 
 int main(void) {
@@ -22,8 +23,7 @@ int main(void) {
   int input_mode = 1;
 
   do {
-    files = (char **)malloc(sizeof(char *) * 500);
-    
+    alloc();
     clear_screen();
     int file_count = get_file_list(active_dir);
     show_file_list(file_count);
@@ -172,6 +172,15 @@ char *generate_command(const char *filename) {
   strcat(command, d);
 
   return(command);
+}
+
+void alloc(void) {
+  files = (char **)malloc(sizeof(char *) * 500);
+
+  if(files == NULL) {
+    puts("Unable to allocate memory. Program will now exit.");
+    exit(1);
+  }
 }
 
 void clear_screen(void) {
