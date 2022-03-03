@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <dirent.h>
 
 int main(void) {
   char filename[50];
@@ -8,7 +9,17 @@ int main(void) {
 
   system("clear");
 
+  struct dirent *de;
+  DIR *dr = opendir(".");
+
   puts("C PLAYGROUNDS COMPILER");
+
+  while ((de = readdir(dr)) != NULL)
+            printf("%s\n", de->d_name);
+
+    closedir(dr);
+
+
   printf("Enter filename without extension: ");
   scanf("%s", filename);
 
