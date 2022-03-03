@@ -4,6 +4,8 @@
 #include <dirent.h>
 #include <sys/stat.h>
 
+#define ROOT "[Root]"
+
 char **files;
 char *active_dir;
 
@@ -28,7 +30,7 @@ int main(void) {
     int file_count = get_file_list(active_dir);
     show_file_list(file_count);
     filename = *(files + get_file_choice(file_count));
-    if(strcmp(filename, "[Root]") == 0) {
+    if(strcmp(filename, ROOT) == 0) {
       active_dir = ".";
     } else if(is_directory(filename)) {
       *(filename + strlen(filename) - 1) = '\0';
@@ -60,7 +62,7 @@ int get_file_list(const char *dir) {
     filename_length = strlen(file);
     if(strcmp(dir, ".") != 0) {
       if(i == 0) {
-        *files = "[Root]";
+        *files = ROOT;
         i++;
         continue;
       }
