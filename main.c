@@ -7,17 +7,27 @@ int main(void) {
   char filename[50];
   char command[500] = "";
 
-  system("clear");
+  system("cls");
 
   struct dirent *de;
   DIR *dr = opendir(".");
 
   puts("C PLAYGROUNDS COMPILER");
 
-  while ((de = readdir(dr)) != NULL)
-            printf("%s\n", de->d_name);
+  char *file;
+  int filename_length;
 
-    closedir(dr);
+  while((de = readdir(dr)) != NULL) {
+    file = de->d_name;
+    filename_length = strlen(file);
+    char file_end[3] = {*(file + filename_length - 2), *(file + filename_length - 1), '\0'};
+    // printf("%s\n", file_end);
+
+    if(strcmp(file_end, ".c") == 0) {
+      printf("%s\n", de->d_name);
+    }
+  }
+  closedir(dr);
 
 
   printf("Enter filename without extension: ");
