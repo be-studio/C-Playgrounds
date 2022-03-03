@@ -10,7 +10,7 @@ char *active_dir;
 int get_file_list(const char *);
 void show_file_list(int);
 int is_listed_directory(const char *);
-int get_file_choice(void);
+int get_file_choice(int);
 int is_directory(const char *);
 char *generate_command(const char *);
 void clear_screen(void);
@@ -27,8 +27,10 @@ int main(void) {
     clear_screen();
     int file_count = get_file_list(active_dir);
     show_file_list(file_count);
-    filename = *(files + get_file_choice());
-    if(is_directory(filename)) {
+    filename = *(files + get_file_choice(file_count));
+    if(strcmp(filename, "[Root]") == 0) {
+      active_dir = ".";
+    } else if(is_directory(filename)) {
       *(filename + strlen(filename) - 1) = '\0';
       active_dir = filename;
     } else {
@@ -40,6 +42,7 @@ int main(void) {
   clear_screen();
   system(command);
 
+  free(files);
   return(0);
 }
 
@@ -56,6 +59,11 @@ int get_file_list(const char *dir) {
     file = de->d_name;
     filename_length = strlen(file);
     if(strcmp(dir, ".") != 0) {
+      if(i == 0) {
+        *files = "[Root]";
+        i++;
+        continue;
+      }
       strcpy(path, active_dir);
       strcat(path, "/");
       strcat(path, file);
@@ -70,7 +78,7 @@ int get_file_list(const char *dir) {
       *(file + filename_length + 1) = '\0';
       *(files + i) = file;
       i++;
-    } else {
+    } else if(strcmp(file, "main.c") != 0) {
       char file_end[3] = {
         *(file + filename_length - 2),
         *(file + filename_length - 1),
@@ -115,10 +123,19 @@ int is_listed_directory(const char *file) {
   return(1);
 }
 
-int get_file_choice(void) {
-  int choice;
-  printf("Enter number of file to run: ");
-  scanf("%d", &choice);
+int get_file_choice(int file_count) {
+  int choice, input_mode = 1;
+
+  do {
+    printf("Enter number of file to run: ");
+    scanf("%d", &choice);
+    if(choice < 0 || choice >= file_count) {
+      puts("That is an invalid choice. Please try again.");
+    } else {
+      input_mode = 0;
+    }
+  } while(input_mode);
+  
   return(choice);
 }
 
