@@ -139,18 +139,20 @@ void show_file_list(int count) {
  * @return int `1` if the directory can be listed
  */
 int is_listed_directory(const char *dir) {
+  // *** When updating this array, don't forget to update i max on line marked 'A'. ***
   char *unlisted_dirs[] = {
     ".",
     "..",
     ".cache",
     ".ccls-cache",
     ".git",
+    ".vscode",
     "html",
     "latex"
   };
   int i;
 
-  for(i = 0; i < 7; i++) {
+  for(i = 0; i < 8; i++) {  // <- A
     if(strcmp(dir, *(unlisted_dirs + i)) == 0) {
       return(0);
     }
