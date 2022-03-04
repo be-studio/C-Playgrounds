@@ -1,7 +1,7 @@
 compile = ["make", "-s"]
-run = "./main"
+run = "./main.out"
 entrypoint = "main.c"
-hidden = ["main", "**/*.o", "**/*.out", ".ccls-cache", "Makefile", ".gitignore"]
+hidden = ["**/*.o", "**/*.out", ".ccls-cache", "Makefile", "Doxyfile", ".gitignore"]
 
 [languages.c]
 pattern = "**/*.{c,h}"
