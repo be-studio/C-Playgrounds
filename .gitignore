@@ -4,3 +4,5 @@
 *.blob
 /.cache
 /.ccls-cache
+main
+/main.dSYM

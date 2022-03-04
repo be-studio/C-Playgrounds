@@ -9,6 +9,8 @@
     "**/*.out": true,
     "html/": true,
     "latex/": true,
-    ".vscode/": true
+    ".vscode/": true,
+    "main": true,
+    "main.dSYM/": true
   }
 }

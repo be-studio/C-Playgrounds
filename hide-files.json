@@ -9,7 +9,9 @@
         "**/*.out",
         "html/",
         "latex/",
-        ".vscode/"
+        ".vscode/",
+        "main",
+        "main.dSYM/"
       ]
     }
   ]
