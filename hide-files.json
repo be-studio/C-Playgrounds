@@ -1,0 +1,16 @@
+{
+  "profiles": [
+    {
+      "name": "Default",
+      "detail": "",
+      "description": "Test",
+      "hidden": [
+        "**/*.o",
+        "**/*.out",
+        "html/",
+        "latex/",
+        ".vscode/"
+      ]
+    }
+  ]
+}
