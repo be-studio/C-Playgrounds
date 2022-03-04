@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../wraparound_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;wraparound.c'],['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main(void):&#160;main.c']]],
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]]
+  ['generate_5fcommand_0',['generate_command',['../main_8c.html#a5ebc1e3c0077e47338fc47874afd2ff7',1,'main.c']]],
+  ['get_5ffile_5fchoice_1',['get_file_choice',['../main_8c.html#a2a7a4ca96b53f385118022bb8c922ecb',1,'main.c']]],
+  ['get_5ffile_5flist_2',['get_file_list',['../main_8c.html#aa1e37a928421482c92f8b2bcf0dfb9c6',1,'main.c']]]
 ];

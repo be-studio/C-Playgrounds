@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5flisted_5fdirectory_0',['is_listed_directory',['../main_8c.html#a2979e6e60bdd612f3eeb3e64a67cb9a5',1,'main.c']]]
+  ['clear_5fscreen_0',['clear_screen',['../main_8c.html#abc40cd622f423abf44084c8f8595f57f',1,'main.c']]]
 ];

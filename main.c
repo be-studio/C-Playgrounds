@@ -122,7 +122,7 @@ int get_file_list(const char *dir) {
  * as a menu.  Also shows a 'root' option to return to the root directory if in
  * a subdirectory.
  *
- * @param count The number of menu options.
+ * @param count The number of menu options
  */
 void show_file_list(int count) {
   int i;
@@ -136,7 +136,7 @@ void show_file_list(int count) {
  * in the menu or not.
  *
  * @param dir
- * @return int `1` if the directory can be listed.
+ * @return int `1` if the directory can be listed
  */
 int is_listed_directory(const char *dir) {
   char *unlisted_dirs[] = {
@@ -160,10 +160,10 @@ int is_listed_directory(const char *dir) {
 }
 
 /**
- * @brief Get the file choice object
+ * @brief Manages input from the user.
  *
- * @param file_count
- * @return int
+ * @param file_count Number of menu options
+ * @return int The choice made by the user
  */
 int get_file_choice(int file_count) {
   int choice, input_mode = 1;
@@ -181,6 +181,13 @@ int get_file_choice(int file_count) {
   return(choice);
 }
 
+/**
+ * @brief Determines if the provided file, displayed in the menu, is a
+ * directory.
+ *
+ * @param filename
+ * @return int `1` if the file is a directory
+ */
 int is_directory(const char *filename) {
   if(*(filename + strlen(filename) - 1) == '*') {
     return(1);
@@ -188,6 +195,13 @@ int is_directory(const char *filename) {
   return(0);
 }
 
+/**
+ * @brief Generates the `gcc` command to execute using the file chosen by the
+ * user.
+ *
+ * @param filename
+ * @return char* The `gcc` command
+ */
 char *generate_command(const char *filename) {
   char command[500] = "";
   char path[128] = "";
@@ -216,6 +230,9 @@ char *generate_command(const char *filename) {
   return(command);
 }
 
+/**
+ * @brief Allocates memory to the `files` array and checks the allocation.
+ */
 void alloc(void) {
   files = (char **)malloc(sizeof(char *) * 500);
 
@@ -225,6 +242,9 @@ void alloc(void) {
   }
 }
 
+/**
+ * @brief Clears the output display.
+ */
 void clear_screen(void) {
   #if defined(_WIN32) || defined(_WIN64)
   system("cls");

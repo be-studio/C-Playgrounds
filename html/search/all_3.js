@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['show_5ffile_5flist_0',['show_file_list',['../main_8c.html#aa1a7cbebc2304aa5d47f1ae008c3582e',1,'main.c']]]
+  ['is_5fdirectory_0',['is_directory',['../main_8c.html#a5653a5a2450240411b34cdf1c00be651',1,'main.c']]],
+  ['is_5flisted_5fdirectory_1',['is_listed_directory',['../main_8c.html#a2979e6e60bdd612f3eeb3e64a67cb9a5',1,'main.c']]]
 ];

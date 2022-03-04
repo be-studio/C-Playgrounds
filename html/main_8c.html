@@ -96,19 +96,21 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2979e6e60bdd612f3eeb3e64a67cb9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the provided directory is one of those not to be listed in the menu or not.  <a href="main_8c.html#a2979e6e60bdd612f3eeb3e64a67cb9a5">More...</a><br /></td></tr>
 <tr class="separator:a2979e6e60bdd612f3eeb3e64a67cb9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7a4ca96b53f385118022bb8c922ecb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2a7a4ca96b53f385118022bb8c922ecb">get_file_choice</a> (int file_count)</td></tr>
-<tr class="memdesc:a2a7a4ca96b53f385118022bb8c922ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the file choice object.  <a href="main_8c.html#a2a7a4ca96b53f385118022bb8c922ecb">More...</a><br /></td></tr>
+<tr class="memdesc:a2a7a4ca96b53f385118022bb8c922ecb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages input from the user.  <a href="main_8c.html#a2a7a4ca96b53f385118022bb8c922ecb">More...</a><br /></td></tr>
 <tr class="separator:a2a7a4ca96b53f385118022bb8c922ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e6c83f8769ef08e0db95ab49ae07b76"><td class="memItemLeft" align="right" valign="top"><a id="a5e6c83f8769ef08e0db95ab49ae07b76" name="a5e6c83f8769ef08e0db95ab49ae07b76"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>is_directory</b> (const char *)</td></tr>
-<tr class="separator:a5e6c83f8769ef08e0db95ab49ae07b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c04b6c4eb02ee5742d6a0f1b3aa1653"><td class="memItemLeft" align="right" valign="top"><a id="a1c04b6c4eb02ee5742d6a0f1b3aa1653" name="a1c04b6c4eb02ee5742d6a0f1b3aa1653"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>generate_command</b> (const char *)</td></tr>
-<tr class="separator:a1c04b6c4eb02ee5742d6a0f1b3aa1653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5653a5a2450240411b34cdf1c00be651"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5653a5a2450240411b34cdf1c00be651">is_directory</a> (const char *filename)</td></tr>
+<tr class="memdesc:a5653a5a2450240411b34cdf1c00be651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if the provided file, displayed in the menu, is a directory.  <a href="main_8c.html#a5653a5a2450240411b34cdf1c00be651">More...</a><br /></td></tr>
+<tr class="separator:a5653a5a2450240411b34cdf1c00be651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebc1e3c0077e47338fc47874afd2ff7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5ebc1e3c0077e47338fc47874afd2ff7">generate_command</a> (const char *filename)</td></tr>
+<tr class="memdesc:a5ebc1e3c0077e47338fc47874afd2ff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the <code>gcc</code> command to execute using the file chosen by the user.  <a href="main_8c.html#a5ebc1e3c0077e47338fc47874afd2ff7">More...</a><br /></td></tr>
+<tr class="separator:a5ebc1e3c0077e47338fc47874afd2ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6810241fb816a15d497e3c9e9272e492"><td class="memItemLeft" align="right" valign="top"><a id="a6810241fb816a15d497e3c9e9272e492" name="a6810241fb816a15d497e3c9e9272e492"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>alloc</b> (void)</td></tr>
+<tr class="memdesc:a6810241fb816a15d497e3c9e9272e492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory to the <code>files</code> array and checks the allocation. <br /></td></tr>
 <tr class="separator:a6810241fb816a15d497e3c9e9272e492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc40cd622f423abf44084c8f8595f57f"><td class="memItemLeft" align="right" valign="top"><a id="abc40cd622f423abf44084c8f8595f57f" name="abc40cd622f423abf44084c8f8595f57f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_screen</b> (void)</td></tr>
+<tr class="memdesc:abc40cd622f423abf44084c8f8595f57f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the output display. <br /></td></tr>
 <tr class="separator:abc40cd622f423abf44084c8f8595f57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,6 +130,33 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>active_dir</b></td>
 <dl class="section author"><dt>Author</dt><dd>Eric L. </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>(C)2022, BE Studio </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a5ebc1e3c0077e47338fc47874afd2ff7" name="a5ebc1e3c0077e47338fc47874afd2ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebc1e3c0077e47338fc47874afd2ff7">&#9670;&nbsp;</a></span>generate_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * generate_command </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates the <code>gcc</code> command to execute using the file chosen by the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char* The <code>gcc</code> command </dd></dl>
+
+</div>
+</div>
 <a id="a2a7a4ca96b53f385118022bb8c922ecb" name="a2a7a4ca96b53f385118022bb8c922ecb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a7a4ca96b53f385118022bb8c922ecb">&#9670;&nbsp;</a></span>get_file_choice()</h2>
 
@@ -144,14 +173,14 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>active_dir</b></td>
       </table>
 </div><div class="memdoc">
 
-<p>Get the file choice object. </p>
+<p>Manages input from the user. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_count</td><td></td></tr>
+    <tr><td class="paramname">file_count</td><td>Number of menu options </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int The choice made by the user </dd></dl>
 
 </div>
 </div>
@@ -182,6 +211,33 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>active_dir</b></td>
 
 </div>
 </div>
+<a id="a5653a5a2450240411b34cdf1c00be651" name="a5653a5a2450240411b34cdf1c00be651"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5653a5a2450240411b34cdf1c00be651">&#9670;&nbsp;</a></span>is_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_directory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determines if the provided file, displayed in the menu, is a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int <code>1</code> if the file is a directory </dd></dl>
+
+</div>
+</div>
 <a id="a2979e6e60bdd612f3eeb3e64a67cb9a5" name="a2979e6e60bdd612f3eeb3e64a67cb9a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2979e6e60bdd612f3eeb3e64a67cb9a5">&#9670;&nbsp;</a></span>is_listed_directory()</h2>
 
@@ -205,7 +261,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>active_dir</b></td>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int <code>1</code> if the directory can be listed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int <code>1</code> if the directory can be listed </dd></dl>
 
 </div>
 </div>
@@ -247,7 +303,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>active_dir</b></td>
 <p>Displays the list of directories and C files in the current directory as a menu. Also shows a 'root' option to return to the root directory if in a subdirectory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">count</td><td>The number of menu options. </td></tr>
+    <tr><td class="paramname">count</td><td>The number of menu options </td></tr>
   </table>
   </dd>
 </dl>
