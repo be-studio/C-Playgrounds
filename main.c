@@ -1,3 +1,12 @@
+/**
+ * BE C PLAYGROUND
+ * PLAYGROUND NAVIGATOR
+ *
+ * @file main.c
+ * @author Eric L.
+ * @brief Provides easy access to compile and execute C files in the playground.
+ * @copyright (C)2022, BE Studio
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -18,6 +27,9 @@ char *generate_command(const char *);
 void alloc(void);
 void clear_screen(void);
 
+/**
+ * @return int
+ */
 int main(void) {
   char *filename;
   active_dir = ".";
@@ -39,7 +51,7 @@ int main(void) {
       input_mode = 0;
     }
   } while(input_mode);
-  
+
   strcpy(command, generate_command(filename));
   clear_screen();
   system(command);
@@ -48,6 +60,12 @@ int main(void) {
   return(0);
 }
 
+/**
+ * @brief Gets the list of directories and C files from the current directory.
+ *
+ * @param dir The current directory
+ * @return int Number of options to be displayed on the navigator menu
+ */
 int get_file_list(const char *dir) {
   struct dirent *de;
   DIR *dr = opendir(dir);
@@ -99,6 +117,13 @@ int get_file_list(const char *dir) {
   return(i);
 }
 
+/**
+ * @brief Displays the list of directories and C files in the current directory
+ * as a menu.  Also shows a 'root' option to return to the root directory if in
+ * a subdirectory.
+ *
+ * @param count The number of menu options.
+ */
 void show_file_list(int count) {
   int i;
   for(i = 0; i < count; i++) {
@@ -106,7 +131,14 @@ void show_file_list(int count) {
   }
 }
 
-int is_listed_directory(const char *file) {
+/**
+ * @brief Determines if the provided directory is one of those not to be listed
+ * in the menu or not.
+ *
+ * @param dir
+ * @return int `1` if the directory can be listed.
+ */
+int is_listed_directory(const char *dir) {
   char *unlisted_dirs[] = {
     ".",
     "..",
@@ -117,7 +149,7 @@ int is_listed_directory(const char *file) {
   int i;
 
   for(i = 0; i < 5; i++) {
-    if(strcmp(file, *(unlisted_dirs + i)) == 0) {
+    if(strcmp(dir, *(unlisted_dirs + i)) == 0) {
       return(0);
     }
   }
@@ -125,6 +157,12 @@ int is_listed_directory(const char *file) {
   return(1);
 }
 
+/**
+ * @brief Get the file choice object
+ *
+ * @param file_count
+ * @return int
+ */
 int get_file_choice(int file_count) {
   int choice, input_mode = 1;
 
@@ -137,7 +175,7 @@ int get_file_choice(int file_count) {
       input_mode = 0;
     }
   } while(input_mode);
-  
+
   return(choice);
 }
 
@@ -151,7 +189,7 @@ int is_directory(const char *filename) {
 char *generate_command(const char *filename) {
   char command[500] = "";
   char path[128] = "";
-  
+
   if(strcmp(active_dir, ".") != 0) {
     strcpy(path, active_dir);
     strcat(path, "/");
@@ -159,7 +197,7 @@ char *generate_command(const char *filename) {
   } else {
     strcpy(path, filename);
   }
-  
+
   char a[] = "gcc -o ";
   char b[] = ".out ";
   char c[] = ".c && ./";

@@ -1,0 +1,146 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Provides easy access to compile and execute C files in the playground.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a77988da40e9a35da51ea0e8943ebbd4a}\label{main_8c_a77988da40e9a35da51ea0e8943ebbd4a}} 
+\#define {\bfseries ROOT}~\char`\"{}\mbox{[}Root\mbox{]}\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_aa1e37a928421482c92f8b2bcf0dfb9c6}{get\+\_\+file\+\_\+list}} (const char $\ast$dir)
+\begin{DoxyCompactList}\small\item\em Gets the list of directories and C files from the current directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_aa1a7cbebc2304aa5d47f1ae008c3582e}{show\+\_\+file\+\_\+list}} (int count)
+\begin{DoxyCompactList}\small\item\em Displays the list of directories and C files in the current directory as a menu. Also shows a \textquotesingle{}root\textquotesingle{} option to return to the root directory if in a subdirectory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a2979e6e60bdd612f3eeb3e64a67cb9a5}{is\+\_\+listed\+\_\+directory}} (const char $\ast$dir)
+\begin{DoxyCompactList}\small\item\em Determines if the provided directory is one of those not to be listed in the menu or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a2a7a4ca96b53f385118022bb8c922ecb}{get\+\_\+file\+\_\+choice}} (int file\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Get the file choice object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a5e6c83f8769ef08e0db95ab49ae07b76}\label{main_8c_a5e6c83f8769ef08e0db95ab49ae07b76}} 
+int {\bfseries is\+\_\+directory} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{main_8c_a1c04b6c4eb02ee5742d6a0f1b3aa1653}\label{main_8c_a1c04b6c4eb02ee5742d6a0f1b3aa1653}} 
+char $\ast$ {\bfseries generate\+\_\+command} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{main_8c_a6810241fb816a15d497e3c9e9272e492}\label{main_8c_a6810241fb816a15d497e3c9e9272e492}} 
+void {\bfseries alloc} (void)
+\item 
+\mbox{\Hypertarget{main_8c_abc40cd622f423abf44084c8f8595f57f}\label{main_8c_abc40cd622f423abf44084c8f8595f57f}} 
+void {\bfseries clear\+\_\+screen} (void)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a047d85a0e14d2ae13523bab2ed49f70b}\label{main_8c_a047d85a0e14d2ae13523bab2ed49f70b}} 
+char $\ast$$\ast$ {\bfseries files}
+\item 
+\mbox{\Hypertarget{main_8c_aa39967a0d13832f157f25dcae86c774d}\label{main_8c_aa39967a0d13832f157f25dcae86c774d}} 
+char $\ast$ {\bfseries active\+\_\+dir}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides easy access to compile and execute C files in the playground. 
+
+BE C PLAYGROUND PLAYGROUND NAVIGATOR
+
+\begin{DoxyAuthor}{Author}
+Eric L. 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+(C)2022, BE Studio 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a2a7a4ca96b53f385118022bb8c922ecb}\label{main_8c_a2a7a4ca96b53f385118022bb8c922ecb}} 
+\index{main.c@{main.c}!get\_file\_choice@{get\_file\_choice}}
+\index{get\_file\_choice@{get\_file\_choice}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{get\_file\_choice()}{get\_file\_choice()}}
+{\footnotesize\ttfamily int get\+\_\+file\+\_\+choice (\begin{DoxyParamCaption}\item[{int}]{file\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Get the file choice object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+count} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_aa1e37a928421482c92f8b2bcf0dfb9c6}\label{main_8c_aa1e37a928421482c92f8b2bcf0dfb9c6}} 
+\index{main.c@{main.c}!get\_file\_list@{get\_file\_list}}
+\index{get\_file\_list@{get\_file\_list}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{get\_file\_list()}{get\_file\_list()}}
+{\footnotesize\ttfamily int get\+\_\+file\+\_\+list (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dir }\end{DoxyParamCaption})}
+
+
+
+Gets the list of directories and C files from the current directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The current directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number of options to be displayed on the navigator menu 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a2979e6e60bdd612f3eeb3e64a67cb9a5}\label{main_8c_a2979e6e60bdd612f3eeb3e64a67cb9a5}} 
+\index{main.c@{main.c}!is\_listed\_directory@{is\_listed\_directory}}
+\index{is\_listed\_directory@{is\_listed\_directory}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{is\_listed\_directory()}{is\_listed\_directory()}}
+{\footnotesize\ttfamily int is\+\_\+listed\+\_\+directory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dir }\end{DoxyParamCaption})}
+
+
+
+Determines if the provided directory is one of those not to be listed in the menu or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int {\ttfamily 1} if the directory can be listed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_aa1a7cbebc2304aa5d47f1ae008c3582e}\label{main_8c_aa1a7cbebc2304aa5d47f1ae008c3582e}} 
+\index{main.c@{main.c}!show\_file\_list@{show\_file\_list}}
+\index{show\_file\_list@{show\_file\_list}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{show\_file\_list()}{show\_file\_list()}}
+{\footnotesize\ttfamily void show\+\_\+file\+\_\+list (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Displays the list of directories and C files in the current directory as a menu. Also shows a \textquotesingle{}root\textquotesingle{} option to return to the root directory if in a subdirectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The number of menu options. \\
+\hline
+\end{DoxyParams}
