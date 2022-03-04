@@ -23,7 +23,7 @@ void show_file_list(int);
 int is_listed_directory(const char *);
 int get_file_choice(int);
 int is_directory(const char *);
-char *generate_command(const char *);
+char *generate_command(const char *, char *);
 void alloc(void);
 void clear_screen(void);
 
@@ -52,7 +52,7 @@ int main(void) {
     }
   } while(input_mode);
 
-  strcpy(command, generate_command(filename));
+  strcpy(command, generate_command(filename, command));
   clear_screen();
   system(command);
 
@@ -204,8 +204,7 @@ int is_directory(const char *filename) {
  * @param filename
  * @return char* The `gcc` command
  */
-char *generate_command(const char *filename) {
-  char command[500] = "";
+char *generate_command(const char *filename, char *command) {
   char path[128] = "";
 
   if(strcmp(active_dir, ".") != 0) {
