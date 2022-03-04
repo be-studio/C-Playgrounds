@@ -112,11 +112,13 @@ int is_listed_directory(const char *file) {
     "..",
     ".cache",
     ".ccls-cache",
-    ".git"
+    ".git",
+    "html",
+    "latex"
   };
   int i;
 
-  for(i = 0; i < 5; i++) {
+  for(i = 0; i < 7; i++) {
     if(strcmp(file, *(unlisted_dirs + i)) == 0) {
       return(0);
     }
