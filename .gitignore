@@ -5,4 +5,10 @@
 /.cache
 /.ccls-cache
 main
+.DS_Store
+/.idea
 /main.dSYM
+/main.out.dSYM
+/cmake-build-debug
+/**/*SYM
+/CMakeLists.txt

@@ -10,8 +10,11 @@
     "**/*.exe": true,
     "html/": true,
     "latex/": true,
-    ".vscode/": true,
+    ".idea/": true,
+    "cmake-build-debug": true,
+    "CMakeLists.txt": true,
     "main": true,
-    "main.dSYM/": true
+    "main.dSYM/": true,
+    "**/*SYM": true
   }
 }
