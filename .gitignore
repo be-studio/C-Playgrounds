@@ -7,6 +7,7 @@
 main
 .DS_Store
 /.idea
+/.vscode
 /main.dSYM
 /main.out.dSYM
 /cmake-build-debug
