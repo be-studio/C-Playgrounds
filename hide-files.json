@@ -11,6 +11,7 @@
         "html/",
         "latex/",
         ".idea/",
+        ".vscode/",
         "cmake-build-debug",
         "CMakeLists.txt",
         "main",
